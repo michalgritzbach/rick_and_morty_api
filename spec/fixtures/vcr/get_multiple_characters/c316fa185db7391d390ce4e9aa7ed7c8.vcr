@@ -1,0 +1,16 @@
+HTTP/1.1 404 Not Found
+Cache-Control: no-cache
+Content-Length: 9
+Content-Type: text/plain; charset=utf-8
+Date: Sat, 22 Aug 2020 05:24:52 GMT
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: ALLOWALL
+X-Request-Id: 6f024133-4ec2-4b0f-8c74-470e4551ea67
+X-Runtime: 0.003111
+Age: 0
+Connection: keep-alive
+Server: Netlify
+X-NF-Request-ID: 2b9861c5-29f2-4c6f-89f3-c42ed7527997-1959124
+
+Not Found

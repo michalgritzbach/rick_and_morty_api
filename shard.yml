@@ -1,0 +1,22 @@
+name: rick_and_morty_api
+version: 0.1.0
+
+authors:
+  - Michal Gritzbach <gritzbach.michal@gmail.com>
+
+crystal: 0.35.1
+
+dependencies:
+  crest:
+    github: mamantoha/crest
+
+development_dependencies:
+  coverage:
+    github: anykeyh/crystal-coverage
+  icr:
+    github: crystal-community/icr
+    branch: master
+  vcr:
+    github: spoved/vcr.cr
+
+license: MIT
