@@ -21,5 +21,6 @@ module RickAndMortyApi
     end
 
     include Character
+    include Episode
   end
 end

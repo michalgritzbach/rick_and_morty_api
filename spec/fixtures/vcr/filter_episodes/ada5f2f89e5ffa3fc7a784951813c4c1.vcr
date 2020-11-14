@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=259200
+Cache-Control: public
+Content-Type: application/json; charset=utf-8
+Date: Sat, 14 Nov 2020 14:35:55 GMT
+Etag: W/"479-VS7B3pgNXmA+kG2yKo/W/TIAPTs"
+Expires: Tue, 17 Nov 2020 14:35:55 GMT
+Server: Netlify
+X-Powered-By: Express
+Content-Length: 1145
+Age: 0
+Connection: keep-alive
+Vary: Accept-Encoding
+X-NF-Request-ID: 6acf82a0-ac76-449c-98cb-894b2a4cf67f-6921841
+
+{"info":{"count":1,"pages":1,"next":null,"prev":null},"results":[{"id":1,"name":"Pilot","air_date":"December 2, 2013","episode":"S01E01","characters":["https://rickandmortyapi.com/api/character/1","https://rickandmortyapi.com/api/character/2","https://rickandmortyapi.com/api/character/35","https://rickandmortyapi.com/api/character/38","https://rickandmortyapi.com/api/character/62","https://rickandmortyapi.com/api/character/92","https://rickandmortyapi.com/api/character/127","https://rickandmortyapi.com/api/character/144","https://rickandmortyapi.com/api/character/158","https://rickandmortyapi.com/api/character/175","https://rickandmortyapi.com/api/character/179","https://rickandmortyapi.com/api/character/181","https://rickandmortyapi.com/api/character/239","https://rickandmortyapi.com/api/character/249","https://rickandmortyapi.com/api/character/271","https://rickandmortyapi.com/api/character/338","https://rickandmortyapi.com/api/character/394","https://rickandmortyapi.com/api/character/395","https://rickandmortyapi.com/api/character/435"],"url":"https://rickandmortyapi.com/api/episode/1","created":"2017-11-10T12:56:33.798Z"}]}

@@ -1,5 +1,3 @@
-require "./entity"
-
 module RickAndMortyApi
   class Character
     include JSON::Serializable
