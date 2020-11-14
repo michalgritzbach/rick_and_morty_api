@@ -11,8 +11,8 @@ Crystal implementation of the [Rick and Morty API](https://rickandmortyapi.com).
 
 ```yaml
 dependencies:
- rick_and_morty_api:
-   github: michalgritzbach/rick_and_morty_api
+  rick_and_morty_api:
+    github: michalgritzbach/rick_and_morty_api
 ```
 
 2. Run `shards install`
@@ -91,7 +91,7 @@ client.locations(name: "Earth")
 
 ## TODO
 
-[ ] Load and return associated records (e.g. `residents` from `Location`)
+- [ ] Load and return associated records (e.g. `residents` from `Location`)
 
 ## Development
 
