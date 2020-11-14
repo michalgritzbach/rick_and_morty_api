@@ -1,10 +1,10 @@
+require "./entity"
+
 module RickAndMortyApi
   class Character
-    include Entity(Character)
     include JSON::Serializable
 
     @endpoint = "character"
-    @client = Client.new
 
     enum Status
       Alive
@@ -19,7 +19,7 @@ module RickAndMortyApi
       Unknown
     end
 
-    alias FilterParams = {name: String?, status: Status?, gender: Gender?, species: String?, race: String?}
+    # alias FilterParams = {name: String?, status: Status?, gender: Gender?, species: String?, race: String?}
 
     getter id : Int64
     getter name : String
