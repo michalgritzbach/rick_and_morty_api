@@ -9,11 +9,11 @@ Crystal implementation of the [Rick and Morty API](https://rickandmortyapi.com).
 
 1. Add the dependency to your `shard.yml`:
 
-   ```yaml
-   dependencies:
-     rick_and_morty_api:
-       github: michalgritzbach/rick_and_morty_api
-   ```
+```yaml
+dependencies:
+ rick_and_morty_api:
+   github: michalgritzbach/rick_and_morty_api
+```
 
 2. Run `shards install`
 
@@ -28,6 +28,8 @@ client = RickAndMortyApi::Client.new # or RickAndMortyApi.client
 ```
 
 After that, you can call methods on `client`. There are four methods with the same signature for getting characters, episodes and locations.
+
+### Characters
 
 ```crystal
 # List all characters
@@ -46,6 +48,50 @@ client.characters(1, 2, 3)
 client.characters(name: "Rick")
 # => [RickAndMortyApi::Character{}, …]
 ```
+
+### Episodes
+
+```crystal
+# List all episodes
+client.all_episodes
+# => [RickAndMortyApi::Episode{}, …]
+
+# Single episode
+client.episode(1)
+# => RickAndMortyApi::Episode{}
+
+# Multiple episodes by IDs
+client.episodes(1, 2, 3)
+# => [RickAndMortyApi::Episode{}, …]
+
+# Multiple episodes filtered by params
+client.episodes(name: "Pilot")
+# => [RickAndMortyApi::Episode{}, …]
+```
+
+### Locations
+
+```crystal
+# List all locations
+client.all_locations
+# => [RickAndMortyApi::Location{}, …]
+
+# Single location
+client.location(1)
+# => RickAndMortyApi::Location{}
+
+# Multiple locations by IDs
+client.locations(1, 2, 3)
+# => [RickAndMortyApi::Location{}, …]
+
+# Multiple locations filtered by params
+client.locations(name: "Earth")
+# => [RickAndMortyApi::Location{}, …]
+```
+
+## TODO
+
+[ ] Load and return associated records (e.g. `residents` from `Location`)
 
 ## Development
 
