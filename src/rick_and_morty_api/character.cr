@@ -2,8 +2,6 @@ module RickAndMortyApi
   class Character
     include JSON::Serializable
 
-    @endpoint = "character"
-
     enum Status
       Alive
       Dead
@@ -16,8 +14,6 @@ module RickAndMortyApi
       Genderless
       Unknown
     end
-
-    # alias FilterParams = {name: String?, status: Status?, gender: Gender?, species: String?, race: String?}
 
     getter id : Int64
     getter name : String

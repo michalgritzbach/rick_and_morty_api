@@ -1,14 +1,17 @@
 module RickAndMortyApi
-  class Episode
+  class Location
     include JSON::Serializable
 
     getter id : Int64
     getter name : String
-    getter air_date : String
-    getter episode : String
 
-    @[JSON::Field(key: "characters")]
-    getter character_urls : Array(String)
+    @[JSON::Field(key: "type")]
+    getter location_type : String
+
+    getter dimension : String
+
+    @[JSON::Field(key: "residents")]
+    getter resident_urls : Array(String)
 
     getter url : String
 
