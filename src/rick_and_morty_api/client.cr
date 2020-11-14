@@ -1,61 +1,32 @@
 module RickAndMortyApi
   class Client
     {% for entity in %w{character episode location} %}
-      # Gets list of all {{entity.id}}s.
-      #
-      # - param [UInt64] page
-      # - return [Array(RickAndMortyApi::{{entity.id.capitalize}})] list of {{entity.id}}s
-      #
-      # ```
-      # client.all_{{entity.id}}s
-      # client.all_{{entity.id}}s(3)
-      # ```
-      def all_{{entity.id}}s(page : UInt64 = 1) : Array(RickAndMortyApi::{{entity.id.capitalize}})
+      # Gets list of all `{{entity.id.capitalize}}`s.
+      def all_{{entity.id}}s(page : UInt64 = 1) : Array({{entity.id.capitalize}})
         response = get("/api/{{entity.id}}/", {"page" => page.to_s})
 
-        Array(RickAndMortyApi::{{entity.id.capitalize}}).from_json(response, root: "results")
+        Array({{entity.id.capitalize}}).from_json(response, root: "results")
       end
 
-      # Gets a single {{entity.id}}.
-      #
-      # - param [UInt64] id
-      # - return [RickAnyMortyApi::Character]
-      #
-      # ```
-      # client.{{entity.id}}(1)
-      # ```
-      def {{entity.id}}(id : UInt64) : RickAndMortyApi::{{entity.id.capitalize}}
+      # Gets a single `{{entity.id.capitalize}}`.
+      def {{entity.id}}(id : UInt64) : {{entity.id.capitalize}}
         response = get("api/{{entity.id}}/#{id}")
 
-        RickAndMortyApi::{{entity.id.capitalize}}.from_json(response)
+        {{entity.id.capitalize}}.from_json(response)
       end
 
-      # Gets list of multiple {{entity.id}}s.
-      #
-      # - param [Array(UInt64)] ids
-      # - return [Array(RickAndMortyApi::{{entity.id.capitalize}})] list of {{entity.id}}s
-      #
-      # ```
-      # client.{{entity.id}}s(1, 2, 3)
-      # ```
-      def {{entity.id}}s(*ids : UInt64) : Array(RickAndMortyApi::{{entity.id.capitalize}})
+      # Gets list of multiple `{{entity.id.capitalize}}`s.
+      def {{entity.id}}s(*ids : UInt64) : Array({{entity.id.capitalize}})
         response = get("api/{{entity.id}}/#{ids.join(",")}")
 
-        Array(RickAndMortyApi::{{entity.id.capitalize}}).from_json(response)
+        Array({{entity.id.capitalize}}).from_json(response)
       end
 
-      # Gets list of multiple {{entity.id}}s.
-      #
-      # - param [Hash] params
-      # - return [Array(RickAndMortyApi::{{entity.id.capitalize}})] list of {{entity.id}}s
-      #
-      # ```
-      # client.{{entity.id}}s({gender: Male})
-      # ```
-      def {{entity.id}}s(**params) : Array(RickAndMortyApi::{{entity.id.capitalize}})
+      # Gets list of multiple `{{entity.id.capitalize}}`s.
+      def {{entity.id}}s(**params) : Array({{entity.id.capitalize}})
         response = get("api/{{entity.id}}/", params.to_h)
 
-        Array(RickAndMortyApi::{{entity.id.capitalize}}).from_json(response, root: "results")
+        Array({{entity.id.capitalize}}).from_json(response, root: "results")
       end
     {% end %}
 
